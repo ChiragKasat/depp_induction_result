@@ -24,6 +24,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* background: url('./Instagram.jpg') no-repeat center center fixed; */
+}
+
+.block {
+	display: block;
+}
+
+.none {
+	display: none;
+}
+
+.depp-image {
+	max-height: 60vh;
+	max-width: 90vw;
+	animation: reveal 0.5s ease-in;
 }
 
 .canvas {
@@ -47,6 +62,7 @@
 	color: white;
 	font-size: 3rem;
 	max-width: 550px;
+	z-index: 100;
 }
 
 @keyframes reveal {

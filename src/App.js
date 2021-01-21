@@ -163,22 +163,29 @@ const App = () => {
 
 				{!show ? (
 					<div className='heading'>
-						Hey {inductee}, scratch to see wheter you are inducted or not 😉🚀
+						Hey {inductee}, scratch to see whether you are inducted or not 😉🚀
 					</div>
 				) : (
-					<div className='heading'>Welcome to DePP!!💯</div>
+					<div className='heading'>
+						Welcome to the fam <span style={{ color: 'red' }}>❤</span>
+					</div>
 				)}
 			</div>
 
-			<div className='container'>
+			<div className={`${show ? 'none' : 'block'} container`}>
 				<canvas
 					className='canvas'
 					ref={canvasRef}
 					width='300px'
 					height='300px'
 				></canvas>
-				<div className='inner'>INDUCTED</div>
+				{/* <div className='inner'>INDUCTED</div> */}
 			</div>
+			<img
+				src='/Instagram.jpg'
+				alt=''
+				className={`depp-image ${show ? 'block' : 'none'}`}
+			></img>
 		</div>
 	);
 };
