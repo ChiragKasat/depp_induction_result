@@ -16,11 +16,36 @@
 	flex-direction: column;
 }
 
+.container {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.canvas {
+	position: absolute;
+	top: 0;
+}
+
+.inner {
+	text-transform: capitalize;
+	font-size: 2rem;
+}
+
+.head {
+	text-align: center;
+	margin: 1rem 0;
+}
+
 .heading {
 	animation: reveal 0.5s ease-in 0.1s;
 	transition: all cubic-bezier(0.86, 0, 0.07, 1);
 	color: white;
-	font-size: 2rem;
+	font-size: 3rem;
 	max-width: 550px;
 }
 
@@ -32,5 +57,15 @@
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media (max-width: 764px) {
+	.heading {
+		font-size: 2rem;
+	}
+
+	.inner {
+		font-size: 1.4rem;
 	}
 }

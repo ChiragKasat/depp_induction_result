@@ -146,18 +146,28 @@ const App = () => {
 	return (
 		<div className='App'>
 			{show ? <Confetti /> : null}
-			<div
-				className='heading'
-				style={show ? { display: 'none' } : { display: 'block' }}
-			>
-				Hey {inductee}, scratch to see wheter you are inducted or not 😉🚀
-			</div>
+			<div className='head'>
+				{/* <div
+					className='heading'
+					style={show ? { display: 'none' } : { display: 'block' }}
+				>
+					Hey {inductee}, scratch to see wheter you are inducted or not 😉🚀
+				</div>
 
-			<div
-				className='heading'
-				style={show ? { display: 'block' } : { display: 'none' }}
-			>
-				Welcome to DePP!!💯
+				<div
+					className='heading'
+					style={show ? { display: 'block' } : { display: 'none' }}
+				>
+					Welcome to DePP!!💯
+				</div> */}
+
+				{!show ? (
+					<div className='heading'>
+						Hey {inductee}, scratch to see wheter you are inducted or not 😉🚀
+					</div>
+				) : (
+					<div className='heading'>Welcome to DePP!!💯</div>
+				)}
 			</div>
 
 			<div className='container'>
@@ -167,6 +177,7 @@ const App = () => {
 					width='300px'
 					height='300px'
 				></canvas>
+				<div className='inner'>INDUCTED</div>
 			</div>
 		</div>
 	);
